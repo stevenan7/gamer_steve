@@ -1,0 +1,33 @@
+<div class = "title">
+	WELCOME
+	<%=@player.username.upcase%>
+</div>
+
+<div id = "player_stats">
+	<table style = "width:100%"><span id="table_title"><%=@player.username.upcase%> GAME STATS </span>
+		<tr>
+			<td>Game</td>
+			<td>Wins</td>
+			<td>Losses</td>
+		</tr>
+		<% @player_games.each do |player_game| %>
+		<tr>
+			<td><%= player_game.game.name %></td>
+			<td><%= player_game.wins%></td>
+			<td><%=player_game.losses%></td>
+			<% end %>
+		</table>
+	</div>
+	<form id = "redirect_simon" action = '/redirect_simon'method = 'post'>
+		<input type="submit" value="Play Simon Says">
+	</form>
+	<form id = "redirect_tic_tac" action = '/tic_tac_toe'method = 'post'>
+		<input type="submit" value="Play Tic Tac Toe">
+	</form>
+ <form action = '/logout'method = 'get'>
+    <input type="submit" value="Logout">
+  </form>
+
+
+
+

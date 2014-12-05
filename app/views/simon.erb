@@ -1,0 +1,45 @@
+<!-- DO NOT MODIFY -->
+
+<div class="container">
+  <h1>Simon Cowell Says</h1>
+  <div id = "player_record">
+  <%=@player.username.capitalize%>'s Record <br>
+  W / L<br>
+  <%=@player_games.wins%>  |
+  <%=@player_games.losses%><br>
+  </div>
+
+
+
+<br>
+<div id ="guest_turn"> Guest Turn: <br>Click the squares in any sequence then click 'Done with Turn'</div>
+<div id ="player_turn"> <%=@player.username.capitalize%>'s Turn: <br>Click the squares in any sequence then click 'End Game'</div>
+
+<a id="done_turn" href="#">Done with Turn</a><br>
+<a id="end_game" href="#">End Game</a>
+<br>
+<br>
+<a href = "/player/1/games"> Games </a><br>
+ <form action = '/logout'method = 'get'>
+    <input type="submit" value="Logout">
+  </form>
+<form id ="new_player_form" action="/new_player" method="post">
+  <br>
+  <input type="text" name="username" placeholder="username"> <br>
+  <input type="password" name="password" placeholder="password"> <br><br>
+  <input type="submit" value="Sign Up">
+</form>
+
+
+<ul id="color_me">
+  <li id = "1"></li>
+  <li id = "2"></li>
+  <li id = "3"></li>
+  <li id = "4"></li>
+  <li id = "5"></li>
+  <li id = "6"></li>
+  <li id = "7"></li>
+  <li id = "8"></li>
+  <li id = "9"></li>
+</ul>
+
